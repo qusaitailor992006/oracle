@@ -1,0 +1,26 @@
+# Git ignore rules for ORACLE platform
+.env
+.env.local
+*.pyc
+__pycache__/
+.pytest_cache/
+*.db
+*.sqlite3
+backend/data/*.db
+
+# Node dependencies
+node_modules/
+dist/
+build/
+.vite/
+
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
