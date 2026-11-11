@@ -7,6 +7,8 @@ from backend.app.services.analytics_service import analytics_service
 
 class TestOracleCore(unittest.TestCase):
     def setUp(self):
+        from backend.app.core.database import Base, engine
+        Base.metadata.create_all(bind=engine)
         db = SessionLocal()
         try:
             synthetic_business_engine.seed_initial_enterprise_data(db)
